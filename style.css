@@ -1,0 +1,130 @@
+body {
+  background-image: url(images/background\ wood.png);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.book {
+  background-image: url(images/normal\ book.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 3px solid black;
+  border-radius: 15px;
+  margin: 50px 100px 50px 100px;
+  height: 90%;
+  width: 70%;
+  position: relative;
+  left: 10%
+}
+
+.leftside {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+.realtime {
+  background-image: url(images/clock.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  display: flex;
+  width: 35vh;
+  height: 35vh;
+  border: 3px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  left: 26%;
+}
+
+.notebook {
+  position: relative;
+  display: flex;
+  border: 3px solid black;
+  border-radius: 25px;
+  top: 50%;
+  left: 10%;
+  width: 80%;
+  height: 45%;
+}
+
+.makenote {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: orange;
+  border: solid 2px orange;
+  border-radius: 25px;
+}
+
+.rightside {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  float: right;
+  height: 100%;
+  width: 50%;
+  right: 0%;
+}
+
+.dinogame {
+  display: block;
+  width: 170px;
+  height: 170px;
+  border: solid 3px black;
+  border-radius: 15%;
+}
+
+.tictactoegame {
+  display: block;
+  width: 170px;
+  height: 170px;
+  border: solid 3px black;
+  border-radius: 15%;
+}
+
+.rockpaperscissorsgame {
+  display: block;
+  width: 170px;
+  height: 170px;
+  border: solid 3px black;
+  border-radius: 15%;
+}
+
+.snakegame {
+  display: block;
+  width: 170px;
+  height: 170px;
+  border: solid 3px black;
+  border-radius: 15%;
+}
+
+.guessthenumbergame {
+  display: block;
+  width: 170px;
+  height: 170px;
+  border: solid 3px black;
+  border-radius: 15%;
+}
+
+.notfunctional {
+  display: block;
+  width: 170px;
+  height: 170px;
+  border: solid 3px black;
+  border-radius: 15%;
+}
