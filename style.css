@@ -8,7 +8,7 @@ body {
   flex-direction: row;
 }
 
-.book {
+#playbook {
   background-image: url(images/normal\ book.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -18,10 +18,11 @@ body {
   height: 90%;
   width: 70%;
   position: relative;
-  left: 10%
+  left: 6.5%;
+  bottom: 2.5%;
 }
 
-.leftside {
+#leftside {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -30,101 +31,186 @@ body {
   width: 50%;
 }
 
-.realtime {
-  background-image: url(images/clock.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  display: flex;
-  width: 35vh;
-  height: 35vh;
-  border: 3px solid black;
-  border-radius: 50%;
-  position: absolute;
-  top: 5%;
-  left: 26%;
-}
-
-.notebook {
+#divclock {
   position: relative;
   display: flex;
-  border: 3px solid black;
-  border-radius: 25px;
-  top: 50%;
-  left: 10%;
-  width: 80%;
-  height: 45%;
+  justify-content: center;
+  align-items: center;
+  float: top;
+  width: 100%;
+  height: 30%;
 }
 
-.makenote {
+#clock {
+  background-image: url(images/clock12.svg);
+  background-size: cover;
+  width: 170px;
+  height: 170px;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+#notebook {
+  display: flex;
+  float: bottom;
+  height: 70%;
+  width: 100%;
+}
+
+#button {
+  position: relative;
+  display: flex;
+  float: top;
+  color: yellow;
+  height: 10%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#makenote {
+  color: lightcoral;
+  background: black;
+  border: 3px solid lightcoral;
+  font-size: 16px;
+  font-weight: bold; 
+  width: 150px;
+  height: 56px;
+  border-radius: 15px;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+#makenote:hover {
+  color: black;
+  border: 3px solid black;
+  box-shadow: 0 0 40px 40px lightcoral inset;
+}
+
+#note {
   position: absolute;
-  top: 5%;
-  left: 5%;
+  display: flex;
+  top: 40%;
+  height: 60%;
+  width: 100%;
+}
+
+#notes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 6px solid black;
+  border-radius: 16px;
   width: 90%;
   height: 90%;
-  background-color: orange;
-  border: solid 2px orange;
-  border-radius: 25px;
+  margin: 20px;
 }
 
-.rightside {
+#rightside {
   position: relative;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
   float: right;
   height: 100%;
   width: 50%;
-  right: 0%;
 }
 
-.dinogame {
-  display: block;
-  width: 170px;
-  height: 170px;
-  border: solid 3px black;
-  border-radius: 15%;
+#games {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  top: 10%;
 }
 
-.tictactoegame {
-  display: block;
-  width: 170px;
-  height: 170px;
-  border: solid 3px black;
-  border-radius: 15%;
+#DinoGame {
+  width: 160px;
+  height: 160px;
+  margin: 30px;
 }
 
-.rockpaperscissorsgame {
-  display: block;
-  width: 170px;
-  height: 170px;
-  border: solid 3px black;
-  border-radius: 15%;
+#dinolink {
+  width: 160px;
+  height: 160px;
+  border: 3px solid black;
+  border-radius: 16px;
 }
 
-.snakegame {
-  display: block;
-  width: 170px;
-  height: 170px;
-  border: solid 3px black;
-  border-radius: 15%;
+#dinosvg {
+  width: 110px;
+  height: 110px;
 }
 
-.guessthenumbergame {
-  display: block;
-  width: 170px;
-  height: 170px;
-  border: solid 3px black;
-  border-radius: 15%;
+#TicTacToe {
+  width: 160px;
+  height: 160px;
+  margin: 30px;
 }
 
-.notfunctional {
-  display: block;
-  width: 170px;
-  height: 170px;
-  border: solid 3px black;
-  border-radius: 15%;
+#tictactoelink {
+  border: 3px solid black;
+  border-radius: 16px;
+  width: 160px;
+  height: 160px;
 }
+
+#tictacsvg {
+  width: 105px;
+  height: 105px;
+}
+
+#RockPaperScissors {
+  width: 160px;
+  height: 160px;
+  margin: 30px;
+}
+
+#rockpaperlink {
+  border: 3px solid black;
+  border-radius: 16px;
+  width: 160px;
+  height: 160px;
+}
+
+#rockpapersvg {
+  width: 100px;
+  height: 100px;
+}
+
+#SnakeGame {
+  width: 160px;
+  height: 160px;
+  margin: 30px;
+}
+
+#snakegamelink {
+  border: 3px solid black;
+  border-radius: 16px;
+  width: 160px;
+  height: 160px;
+}
+
+#snakegamesvg {
+  width: 100px;
+  height: 100px;
+}
+
+#funbutton {
+  width: 300px;
+  height: 120px;
+  margin: 0;
+}
+
+#fun {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 120px;
+  border: 3px solid black;
+  border-radius: 16px;
+}
+
