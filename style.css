@@ -75,7 +75,7 @@ body {
   border: 3px solid lightcoral;
   font-size: 16px;
   font-weight: bold; 
-  width: 150px;
+  width: 250px;
   height: 56px;
   border-radius: 15px;
   transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
