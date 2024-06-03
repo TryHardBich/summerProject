@@ -7,6 +7,30 @@
     <title>rockPaperGame</title>
 </head>
 <body>
-
+    <div class="game">
+        <h1>Камень-ножницы-бумага</h1>
+        <div class="counter-block">
+            <div class="count count-user">0</div><!-- мои очки -->
+            <span>:</span>
+            <div class="count count-comp">0</div><!-- comp очки -->
+        </div>
+        <div class="figure-container">
+            <div class="user-field"> <!-- кнопки моей комбинации -->
+                <button class="field rock" data-field="r"></button>
+                <button class="field scissors" data-field="s"></button>
+                <button class="field paper" data-field="p"></button>
+            </div>
+            <div class="comp-field"> <!-- кнопки comp комбинации -->
+                <button class="field rock" data-field="r"></button>
+                <button class="field scissors" data-field="s"></button>
+                <button class="field paper" data-field="p"></button>
+            </div>
+        </div>
+        <h3 class="result">Сделайте выбор</h3>
+    </div>
+    <div class="buttons">
+        <button class="play">Играть заново</button>
+    </div>
+    <script src="/jsfiles/rps.js"></script>
 </body>
 </html>
