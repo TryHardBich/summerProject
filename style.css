@@ -50,6 +50,17 @@ body {
   border-radius: 50%;
 }
 
+#time {
+  position: absolute;
+  font-weight: bold;
+  font-size: 48px;
+  color: white;
+  background-color: black;
+  border: 4px solid white;
+  border-radius: 20px;
+  padding: 10px;  
+}
+
 #notebook {
   display: flex;
   float: bottom;
@@ -85,6 +96,7 @@ body {
   color: black;
   border: 3px solid black;
   box-shadow: 0 0 40px 40px lightcoral inset;
+  cursor: pointer;
 }
 
 #note {
@@ -136,6 +148,7 @@ body {
   height: 160px;
   border: 3px solid black;
   border-radius: 16px;
+  cursor: pointer;
 }
 
 #dinosvg {
@@ -154,6 +167,7 @@ body {
   border-radius: 16px;
   width: 160px;
   height: 160px;
+  cursor: pointer;
 }
 
 #tictacsvg {
@@ -172,6 +186,7 @@ body {
   border-radius: 16px;
   width: 160px;
   height: 160px;
+  cursor: pointer;
 }
 
 #rockpapersvg {
@@ -190,6 +205,7 @@ body {
   border-radius: 16px;
   width: 160px;
   height: 160px;
+  cursor: pointer;
 }
 
 #snakegamesvg {
@@ -212,5 +228,6 @@ body {
   height: 120px;
   border: 3px solid black;
   border-radius: 16px;
+  cursor: pointer;
 }
 
