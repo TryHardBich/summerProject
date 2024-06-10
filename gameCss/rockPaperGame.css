@@ -184,3 +184,23 @@ body {
 		font-size: 20px;
 	}
 }
+
+.previous {
+	position: absolute;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    margin-right: 1400px;
+    margin-bottom: 690px;
+  }
+  
+  .previous:hover {
+    background-color: #B8860B;
+    color: black;
+  }
+  
+  .previous {
+    background-color: #CD853F;
+    color: black;
+    border-radius: 10%;
+  }

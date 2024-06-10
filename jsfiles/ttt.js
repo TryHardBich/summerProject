@@ -90,7 +90,6 @@ function restart(text) {
 }
 
 function updateStat() { // обновляем статистику счета
-
     document.getElementById('sX').innerHTML = stat.x;
     document.getElementById('sO').innerHTML = stat.o;
     document.getElementById('sD').innerHTML = stat.d;

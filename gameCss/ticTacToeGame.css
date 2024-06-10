@@ -7,19 +7,19 @@
 }
 
 #area {
-    width: 156px;
+    width: 306px;
     border: 1px solid #000;
     margin: 0 auto;
     font-size: 0;
 }
 
 .cell {
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
     text-align: center;
     display: inline-block;
-    font-size: 26px;
+    font-size: 60px;
     border: 1px solid #000;
     cursor: pointer;
     vertical-align: middle;
@@ -52,3 +52,22 @@
     padding: 5px;
     text-align: center;
 }
+
+.previous {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  .previous:hover {
+    background-color: #B8860B;
+    color: black;
+  }
+  
+  .previous {
+    background-color: #CD853F;
+    color: black;
+    border-radius: 10%;
+  }
