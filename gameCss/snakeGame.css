@@ -1,0 +1,40 @@
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+#reloadButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reloadButton:hover {
+    background-color: #45a049;
+}
+
+.previous {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  .previous:hover {
+    background-color: #B8860B;
+    color: black;
+  }
+  
+  .previous {
+    background-color: #CD853F;
+    color: black;
+    border-radius: 10%;
+  }
