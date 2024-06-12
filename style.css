@@ -231,3 +231,6 @@ body {
   cursor: pointer;
 }
 
+#logo {
+  width: 280px;
+}

@@ -1,12 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../gameCss/dinoGame.css">
-    <title>dinosaurGame</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dino Game</title>
+<!-- подключаем стили -->
+<link rel="stylesheet" href="/gameCss/dinoGame.css">
 </head>
-<body>
 
+<body>
+<a href="/index.html" class="previous">Back</a>
+<!-- контейнер для центрирования игры -->
+<div class="game-container">
+  <!-- контейнер игрового поля -->
+  <div class="game">
+    <!-- отображение текущего счета -->
+    <div id="score">Счет: 0</div>
+    <!-- контейнер динозаврика -->
+    <div id="dino"></div>
+    <!-- контейнер кактуса -->
+    <div id="cactus"></div>
+    <!-- элемент для отображения "Game Over" -->
+    <div id="gameOver">Game Over</div>
+    <!-- отображение рекорда -->
+    <div id="highScore">Рекорд: 0</div>
+  </div>
+</div>
+
+<!-- подключаем скрипт -->
+<script src="/jsfiles/dino.js"></script>
 </body>
 </html>
