@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <title>PlayBook</title>
-    <script src="jsfiles/clock.js"></script>
+    <script defer src="jsfiles/clock.js"></script>
+    <script defer src="jsfiles/notes.js"></script>
 </head>
 <header>
 </header>
@@ -15,13 +17,14 @@
       <div id="divclock">
         <div id="clock"></div>
         <div id="time"></div>
+        <div id="dateDisplay"></div>
       </div>
       <div id="notebook">
         <div id="button">
-          <button id="makenote">Add new note +</button>
+          <button class="makenote" type="button">Add new note +</button>
         </div>
-        <div id="note">
-          <div id="notes"></div>
+        <div class="noteAdd">
+          <div class="notes"></div>
         </div>
       </div>
     </div>
@@ -43,17 +46,17 @@
         </div>
         <div id="RockPaperScissors">
           <a href="games/rockpaperGame.html">
-          <button id="rockpaperlink">
-            <img src="images/rock-scissors-paper.svg" id="rockpapersvg"></img>
-          </button>
-        </a>
+            <button id="rockpaperlink">
+              <img src="images/rock-scissors-paper.svg" id="rockpapersvg"></img>
+            </button>
+          </a>
         </div>
         <div id="SnakeGame">
           <a href="games/snakeGame.html">
-          <button id="snakegamelink">
-            <img src="images/snake.svg" id="snakegamesvg">
-          </button>
-        </a>
+            <button id="snakegamelink">
+              <img src="images/snake.svg" id="snakegamesvg">
+            </button>
+          </a>
         </div>
         <div id="funbutton">
           <button id="fun">
@@ -65,3 +68,4 @@
   </div>
 </body>
 </html>
+

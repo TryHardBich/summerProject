@@ -96,5 +96,5 @@ function drawGame() {
     snake.unshift(newHead) //новый элемент помещаем в новые координаты, в самое начало 
 }
 
-let game = setInterval(drawGame, 100); // вызываем функцию drawGmae каждые 100 миллисекунд
+let game = setInterval(drawGame, 100); // вызываем функцию drawGame каждые 100 миллисекунд
 
