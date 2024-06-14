@@ -11,26 +11,26 @@ document.addEventListener("keydown", function(event) {
 });
 
 function jump() {
-  if (!dino.classList.contains("jump")) {
-    console.log("Jumping!");
-    dino.classList.add("jump");
-    setTimeout(function() {
-      dino.classList.remove("jump");
-    }, 300);
+  if (!dino.classList.contains("jump")) { // Проверяем, не находится ли динозавр уже в прыжке (не имеет ли класс "jump").
+    console.log("Jumping!"); // Отладка
+    dino.classList.add("jump"); // Добавляем класс "jump" к элементу dino, что должно запускать анимацию прыжка.
+    setTimeout(function() { // Запускаем таймер, чтобы удалить класс "jump" через 300 миллисекунд.
+      dino.classList.remove("jump"); // Удаляем класс "jump" по завершении таймера, прекращая анимацию прыжка.
+    }, 300); // Время таймера
   }
 }
 
-let obstacleMovement = setInterval(function() {
-  let dinoBottom = parseInt(window.getComputedStyle(dino).getPropertyValue("bottom"));
-  let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
+let obstacleMovement = setInterval(function() { // Создаем интервал, который будет вызывать функцию каждые 10 миллисекунд.
+  let dinoBottom = parseInt(window.getComputedStyle(dino).getPropertyValue("bottom")); // Получаем текущее положение динозавра по оси Y (снизу) и преобразуем его в целое число.
+  let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left")); // Получаем текущее положение кактуса по оси X (слева) и преобразуем его в целое число.
 
-  console.log("dinoBottom: " + dinoBottom + ", cactusLeft: " + cactusLeft);
+  console.log("dinoBottom: " + dinoBottom + ", cactusLeft: " + cactusLeft); // Отладка
 
-  if (cactusLeft < 100 && cactusLeft > 50 && dinoBottom <= 10) {
-    alert("Game Over! Your score: " + score);
-    cactus.style.animation = 'none';
-    cactus.style.left = `${cactusLeft}px`;
-    clearInterval(obstacleMovement);
+  if (cactusLeft < 100 && cactusLeft > 50 && dinoBottom <= 10) { // Проверяем, находится ли кактус в опасной зоне и низко ли расположен динозавр (не прыгнул ли он).
+    alert("Game Over! Your score: " + score); // Показываем сообщение "Game Over!" с текущим счетом.
+    cactus.style.animation = 'none'; // Останавливаем анимацию кактуса.
+    cactus.style.left = `${cactusLeft}px`; // Фиксируем текущее положение кактуса.
+    clearInterval(obstacleMovement); // Останавливаем интервал, прекращая движение кактуса.
     isAlive = false; // Меняем значение на false, если умираем
   } else {
     score++; // Увеличиваем счет, если игрок избежал препятствия
