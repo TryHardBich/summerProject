@@ -1,7 +1,11 @@
 const dino = document.getElementById("dino");
 const cactus = document.getElementById("cactus");
+const highScoreElement = document.getElementById("highScore");
+const scoreElement = document.getElementById("score");
 let isAlive = true; // Флаг для отслеживания "живости" динозавра
 let score = 0; // Переменная для хранения счета
+let highScore = localStorage.getItem("highScore") || 0; // взять "highScore" из браузера, если его нет = 0
+highScoreElement.innerText = `Record: ${highScore}`;
 
 document.addEventListener("keydown", function(event) {
   if (isAlive && (event.code === "Space" || event.code === "ArrowUp")) { // Проверка живой ли динозавр
@@ -26,12 +30,20 @@ let obstacleMovement = setInterval(function() { // Создаем интерва
 
   console.log("dinoBottom: " + dinoBottom + ", cactusLeft: " + cactusLeft); // Отладка
 
+  const gameOver = document.getElementById("gameOver");
+
   if (cactusLeft < 100 && cactusLeft > 50 && dinoBottom <= 10) { // Проверяем, находится ли кактус в опасной зоне и низко ли расположен динозавр (не прыгнул ли он).
-    alert("Game Over! Your score: " + score); // Показываем сообщение "Game Over!" с текущим счетом.
+    gameOver.style.display = "block";
     cactus.style.animation = 'none'; // Останавливаем анимацию кактуса.
     cactus.style.left = `${cactusLeft}px`; // Фиксируем текущее положение кактуса.
     clearInterval(obstacleMovement); // Останавливаем интервал, прекращая движение кактуса.
     isAlive = false; // Меняем значение на false, если умираем
+
+      // Проверка и обновление рекорда
+      if (score > highScore) {
+        localStorage.setItem("highScore", score); // сохраняем значение - score, под ключем - hightScore
+        highScoreElement.innerText = `Record: ${score}`; // вывод
+      }
   } else {
     score++; // Увеличиваем счет, если игрок избежал препятствия
     document.getElementById('score').innerText = 'Score: ' + score; // Обновляем отображение счета
