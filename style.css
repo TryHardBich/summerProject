@@ -82,6 +82,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+  left: 15px;
 }
 
 /* Стили для отдельных карточек заметок */
