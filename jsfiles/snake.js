@@ -51,30 +51,30 @@ function endGame() { // при окончании игры появляется 
 }
 
 function drawGame() {
-    ctx.drawImage(ground, 0, 0); // координаты x and y
+    ctx.drawImage(ground, 0, 0); // изображение заемли на координатах 0 0, очищая предыдущий кадр и рисуя новый
     
-    ctx.drawImage(foodImg, food.x, food.y);
+    ctx.drawImage(foodImg, food.x, food.y); // рисует еду на ее текущ. координатах
 
-    for (let i = 0; i < snake.length; i ++) {
+    for (let i = 0; i < snake.length; i ++) { // рисовка змеи
         ctx.fillStyle = i == 0 ? "green" : "teal"; // цвет головы змеи и ее хвоста
         ctx.fillRect(snake[i].x, snake[i].y, box, box); // fillRect нарисовать прямоугольник
     }
-
+    // рисовка счета
     ctx.fillStyle = "white"; // fillStyle - настройка цвета
     ctx.font = "50px Arial"; // настройка счета
     ctx.fillText(score, box * 2.5, box * 1.7); //текст, координат по x, y
 
-    let snakeX = snake[0].x; //первый объект, координат
+    let snakeX = snake[0].x; //первый объект, координат (голова)
     let snakeY = snake[0].y;
 
-    if(snakeX == food.x && snakeY == food.y) {
+    if(snakeX == food.x && snakeY == food.y) { // если координат еды совпадает с координтам головы
         score++;// если я съел еду, увел. счет и создаю новую еду
         food = {
             x: Math.floor((Math.random() * 17 + 1)) * box, // диапазон от 1 до 17
-            y:Math.floor((Math.random() * 15 + 3)) * box // пропускаем 3 квадратика сверху
+            y: Math.floor((Math.random() * 15 + 3)) * box // пропускаем 3 квадратика сверху
         };
-    } else { //если не съел // удаляем последний эл, внутри змейки
-        snake.pop();
+    } else { //если не съел
+        snake.pop();// удаляем последний эл, внутри змейки, чтобы змейка сохраняла свою длину
     }
 
     if(snakeX < box || snakeX > box * 17 // если змея врезается в стенку - endGame

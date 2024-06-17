@@ -45,7 +45,7 @@ body {
 	text-align: center;
 }
 .count::before {
-	content:"";
+	content:""; /* элемент заменяется на значение этого свойства */
 	display: block;
 	padding:3px 8px;
 	background: #1E88E5;
@@ -141,7 +141,7 @@ body {
 }
 .buttons button:hover,
 .buttons button:active {
-	transform:translate(1px,1px);
+	transform:translate(1px,1px); /* перемещение на один пиксель в право и один пиксель вниз */
 	box-shadow: 1px 1px 0 #0c4e00;
 }
 .play {

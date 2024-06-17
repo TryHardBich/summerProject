@@ -13,8 +13,10 @@ window.addEventListener('load', function () { // приложение начин
     function choiceUser(e) { // ф-ция для выбора комбинации пользователя
         if (blocked) return; //после выбора r p s, нельзя сделать сразу второй выбор, пока выбирает компьютер
         let target = e.target; // элемент по которому я кликнул
-        if (target.classList.contains('field')) {
-            userStep = target.dataset.field; // dataset.название атрибута(получение дата атрибута)
+        // содержит ли элемент target класс field, проверка нажали мы имнно на r p s 
+        if (target.classList.contains('field')) { //если мы нажали на какойто из жестов
+            // получение дата атрибута, r, p или s
+            userStep = target.dataset.field; // записывае выбранный жест в userStep
             fields.forEach(item => item.classList.remove('active', 'error')); // удаляем зеленый цвет кнопки и красный, после переигровки
             target.classList.add('active'); // добавляем класс
             choiceComp(); // начинает работать комп
@@ -38,8 +40,9 @@ window.addEventListener('load', function () { // приложение начин
     function winner() {
         blocked = false; //пользователь мог выбирать
 
-        let comb = userStep + compStep; // комбинации 'ss' 'pp' ...
+        let comb = userStep + compStep; // формирование комбинации 'ss' 'pp' ...
 
+        // определяем результат игры в зависимости от комбинации
         switch (comb) {
             case 'rr':
             case 'ss':
@@ -51,9 +54,9 @@ window.addEventListener('load', function () { // приложение начин
             case 'sp':
             case 'pr':
                 res.innerText = 'Вы выиграли!';
-                countU++;
-                countUser.innerText = countU;
-                compField.querySelector('[data-field='+compStep+']').classList.add('error'); // достаем кнопку которую выбрал комп
+                countU++; // увеличиваем счет
+                countUser.innerText = countU; // обновляем счет
+                compField.querySelector('[data-field='+compStep+']').classList.add('error'); // выделяем красным цветом кнопку компа
                 break;
 
             case 'sr':
@@ -62,7 +65,7 @@ window.addEventListener('load', function () { // приложение начин
                 res.innerText = 'Компьютер выиграл!';
                 countC++;
                 countComp.innerText = countC;
-                userField.querySelector('[data-field='+userStep+']').classList.add('error'); // достаем кнопку которую выбрал комп
+                userField.querySelector('[data-field='+userStep+']').classList.add('error'); // выделяем красным цветом кнопку компа
                 break;
         }
     }
@@ -75,7 +78,7 @@ window.addEventListener('load', function () { // приложение начин
         fields.forEach(item => item.classList.remove('active', 'error'));
     }
 
-    play.addEventListener('click', playGame);
+    play.addEventListener('click', playGame); // при нажатии на play, вызывается ф-ция playGame
     userField.addEventListener('click', choiceUser);
 
 });

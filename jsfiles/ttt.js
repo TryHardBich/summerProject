@@ -22,7 +22,7 @@ var winIndex = [ // все победные индексы
 ]
 
 for (var i = 1; i <= 9; i++) {
-    area.innerHTML += "<div class='cell' pos=" + i + "></div>" // innerHrml создает нашу строку (создали ячейки)
+    area.innerHTML += "<div class='cell' pos=" + i + "></div>" // создает 9 элементов div с классом cell
 }
 
 for (var i = 0; i < cell.length; i ++) { // нажатие на какую либо ячейку
@@ -33,10 +33,10 @@ function cellClick() {
 
     var data = [];
     
-    if (!this.innerHTML) { // при нажатии проверяем, занята ли ячейка, если нет то записываем игрока
+    if (!this.innerHTML) { // при нажатии проверяем, занята ли ячейка, если нет то записываем игрока в переменную player
         this.innerHTML = player;
     } else {
-        alert("Ячейка занята"); // ИЗМЕНИТЬ ВСПЛЫВАЮЩИЕ ОКНА <---------------
+        alert("Ячейка занята");
         return;
     }
 
@@ -67,11 +67,11 @@ function cellClick() {
 function checkWin(data) {
     for (i in winIndex) {
         var win = true;
-        for (var j in winIndex[i]) {
-            var id = winIndex[i][j];
-            var ind = data.indexOf(id);
+        for (var j in winIndex[i]) {  // идет по каждомо сочитанию победных индексов
+            var id = winIndex[i][j]; // по каждой ячейке
+            var ind = data.indexOf(id); // проверяет, находится ли номер в массиве дата
 
-            if (ind == -1) {
+            if (ind == -1) { // если не находится, меняем win на false
                 win = false;
             }
         }

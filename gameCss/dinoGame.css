@@ -25,7 +25,7 @@
   position: absolute;
   bottom: 0;
   left: 580px;
-  animation: cactusMove 1s infinite linear;
+  animation: cactusMove 1s infinite linear; /* linear - плавность, infinite - бесконечное повторение, 1с - длительность */
 }
 
 @keyframes cactusMove {
