@@ -7,15 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
         noteEl.classList.add('note');
         noteEl.innerHTML = `
         <div class="note-header">
-            <p>${title}</p>
+            <textarea class="note-title">${title}</textarea>
             <div class="note-actions">
-                <button class="note-edit"><i class="fa-solid fa-marker"></i></button>
+                <button class="note-edit"><i class="fa-solid fa-floppy-disk"></i></button>
                 <button class="note-delete"><i class="fa-solid fa-delete-left"></i></button>
             </div>
         </div>
-        <p>${text}</p>
+        <textarea class="note-text">${text}</textarea>
         `;
-        
+
         noteEl.querySelector('.note-edit').addEventListener('click', () => editNote(noteEl));
         noteEl.querySelector('.note-delete').addEventListener('click', () => deleteNote(noteEl));
         
@@ -38,5 +38,5 @@ document.addEventListener('DOMContentLoaded', () => {
     addBut.addEventListener('click', () => {
         const el = createNote("Заголовок", "Ваш текст");
         notesContainer.appendChild(el);
-    });
+    })
 });
