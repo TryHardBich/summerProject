@@ -85,7 +85,6 @@ body {
   left: 15px;
 }
 
-/* Стили для отдельных карточек заметок */
 #notebook {
   display: flex;
   flex-direction: column;
@@ -94,12 +93,10 @@ body {
   height: 500px;
 }
 
-/* Стили для кнопки добавления новой заметки */
 #button {
   margin-bottom: 1rem;
 }
 
-/* Основные стили для контейнера заметок */
 .notes {
   display: flex;
   flex-direction: column;
@@ -108,15 +105,14 @@ body {
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  max-height: 280px; /* Ограниченная высота для скролла */
-  overflow-y: auto; /* Добавление вертикальной прокрутки */
+  max-height: 280px;
+  overflow-y: auto;
 }
 
 .note { 
   border-bottom: solid black 2px;
 }
 
-/* Стили для отдельных карточек заметок */
 .noteAdd {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
@@ -128,7 +124,6 @@ body {
   margin: 30px;
 }
 
-/* Стили для заголовка карточки */
 .note-header {
   display: flex;
   justify-content: space-between;
@@ -136,18 +131,15 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Стили для текста карточки */
 .note p {
   margin: 0;
 }
 
-/* Стили для кнопок действий */
 .note-actions {
   display: flex;
   gap: 0.5rem;
 }
 
-/* Стили для отдельных кнопок */
 .note-edit, .note-delete {
   background: none;
   border: none;
@@ -159,7 +151,6 @@ body {
   color: #232324;
 }
 
-/* Стили для иконок */
 .note-edit i, .note-delete i {
   font-size: 1rem;
 }
@@ -177,7 +168,6 @@ body {
   height: 60px;
 }
 
-/* Стили для кнопки добавления новой заметки */
 .makenote {
   background-color: rgb(93, 93, 93);
   color: #fff;
